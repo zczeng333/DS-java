@@ -2,7 +2,7 @@ import java.util.Vector;
 import java.util.Enumeration;
 
 public class ListOperation {
-    public static ListNode head;
+    public static ListNode head; /*head node of List*/
 
     public ListOperation(ListNode head, float[] args) {
         /**
