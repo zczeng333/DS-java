@@ -2,7 +2,14 @@ public class TreeOperation {
     private TreeNode root;  /*root of the tree*/
     private TreeNode temp;  /*temporal variable for building threaded tree*/
 
-    public TreeOperation(int[] args) {/*build up a bst based on input args*/
+    public TreeOperation(int[] args) {
+        /**
+         * @description build up a bst based on input args
+         * @param args int array
+         * @return
+         * @author zczeng
+         * @date 2020/3/5 23:14
+         */
         if (args.length > 0) {
             int size = args.length;
             TreeNode top = new TreeNode(null, null, args[0]);/*root of binary search tree*/

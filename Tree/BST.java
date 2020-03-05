@@ -115,6 +115,14 @@ public class BST {
     }
 
     public static void insert(BstNode top, int value) {
+        /**
+         * @description insert new value into Bst
+         * @param top root of bst
+         * @param value new value to be inserted
+         * @return void
+         * @author zczeng
+         * @date 2020/3/5 23:10
+         */
         BstNode node = new BstNode(null, null, null, value);
         BstNode temp = top;
         while (true) {  /*find the proper place to add the node*/
@@ -205,6 +213,13 @@ public class BST {
     }
 
     public static BstNode findmin(BstNode top) {
+        /**
+         * @description find node with the minimum value of Bst
+         * @param top root of bst
+         * @return BstNode node with minimum value
+         * @author zczeng
+         * @date 2020/3/5 23:11
+         */
         BstNode pointer = top;
         while (pointer.left != null) {
             pointer = pointer.left;
@@ -213,6 +228,13 @@ public class BST {
     }
 
     public static BstNode findmax(BstNode top) {
+        /**
+         * @description find node with the maximum value of bst
+         * @param top root of bst
+         * @return BstNode node with maximum value
+         * @author zczeng
+         * @date 2020/3/5 23:12
+         */
         BstNode pointer = top;
         while (pointer.right != null) {
             pointer = pointer.right;
