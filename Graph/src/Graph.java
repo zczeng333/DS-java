@@ -3,7 +3,11 @@ import java.util.Arrays;
 public class Graph {
     public static void main(String[] args) {
         topsort();
+        System.out.println();
         bfs(2, 4);
+        System.out.println();
+        dij(0, 5);
+        System.out.println();
     }
 
     private static void topsort() {
@@ -36,5 +40,16 @@ public class Graph {
             System.out.printf("Path between %d and %d: ", start, end);
             System.out.println(Arrays.toString(path));
         }
+    }
+
+    private static void dij(int start, int end) {
+        int MaxElement = 7;
+        int[][] A = new int[][]{{0, 2, 0, 1, 0, 0, 0}, {0, 0, 0, 3, 10, 0, 0}, {4, 0, 0, 0, 0, 5, 0}, {0, 0, 2, 0, 2, 8, 4}, {0, 0, 0, 0, 0, 0, 6}, {0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 1, 0}};
+        System.out.println("Weight Matrix: ");
+        for (int j = 0; j < MaxElement; j++) {
+            System.out.println(Arrays.toString(A[j]));
+        }
+        DijOperation G = new DijOperation(MaxElement, A);
+        G.Dijkstra(start, end);
     }
 }
