@@ -2,6 +2,9 @@ import java.util.Arrays;
 
 public class Graph {
     public static void main(String[] args) {
+        /**
+         * test for graph
+         * */
         topsort();
         System.out.println();
         bfs(2, 4);
@@ -11,6 +14,13 @@ public class Graph {
     }
 
     private static void topsort() {
+        /**
+         * @description test for topological sort for graph
+         * @param
+         * @return void
+         * @author zczeng
+         * @date 2020/3/10 16:28
+         */
         int MaxElement = 7;
         int[][] A = new int[][]{{0, 1, 1, 1, 0, 0, 0}, {0, 0, 0, 1, 1, 0, 0}, {0, 0, 0, 0, 0, 1, 0}, {0, 0, 1, 0, 0, 1, 1}, {0, 0, 0, 1, 0, 0, 1}, {0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 1, 0}};
         System.out.println("Adjacent Matrix: ");
@@ -26,6 +36,14 @@ public class Graph {
     }
 
     private static void bfs(int start, int end) {
+        /**
+         * @description test for breadth first search
+         * @param start index of start node
+         * @param end index of end node
+         * @return void
+         * @author zczeng
+         * @date 2020/3/10 16:28
+         */
         int MaxElement = 7;
         int[][] A = new int[][]{{0, 1, 0, 1, 0, 0, 0}, {0, 0, 0, 1, 1, 0, 0}, {1, 0, 0, 0, 0, 1, 0}, {0, 0, 1, 0, 1, 1, 1}, {0, 0, 0, 0, 0, 0, 1}, {0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 1, 0}};
         System.out.println("Adjacent Matrix: ");
@@ -43,6 +61,14 @@ public class Graph {
     }
 
     private static void dij(int start, int end) {
+        /**
+         * @description test for Dijkstra algorithm
+         * @param start index of start node
+         * @param end index of end node
+         * @return void
+         * @author zczeng
+         * @date 2020/3/10 16:29
+         */
         int MaxElement = 7;
         int[][] A = new int[][]{{0, 2, 0, 1, 0, 0, 0}, {0, 0, 0, 3, 10, 0, 0}, {4, 0, 0, 0, 0, 5, 0}, {0, 0, 2, 0, 2, 8, 4}, {0, 0, 0, 0, 0, 0, 6}, {0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 1, 0}};
         System.out.println("Weight Matrix: ");

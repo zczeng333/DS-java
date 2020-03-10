@@ -8,6 +8,14 @@ public class GraphOperation {
     private int MaxElement;
 
     public GraphOperation(int MaxElement, int[][] A) {
+        /**
+         * @description Initialization for graph
+         * @param MaxElement Max number of element
+         * @param A Adjacent matrix for graph
+         * @return
+         * @author zczeng
+         * @date 2020/3/10 16:35
+         */
         this.in = new GraphNode[MaxElement];
         this.out = new GraphNode[MaxElement];
         this.InDegree = new int[MaxElement];
@@ -38,7 +46,15 @@ public class GraphOperation {
         //System.out.println(Arrays.toString(this.InDegree));
     }
 
-    private void Add(GraphNode N, int i) {/*add new node with index i to the tail of N*/
+    private void Add(GraphNode N, int i) {
+        /**
+         * @description add new node with index i to the tail of N
+         * @param N GraphNode to be added
+         * @param i index of GraphNode
+         * @return void
+         * @author zczeng
+         * @date 2020/3/10 16:35
+         */
         while (N.next != null) {
             N = N.next;
         }
@@ -46,6 +62,13 @@ public class GraphOperation {
     }
 
     public int[] TopSort() {
+        /**
+         * @description find topological sorting order of the graph
+         * @param
+         * @return int[] graph in topological sorting order
+         * @author zczeng
+         * @date 2020/3/10 16:36
+         */
         int[] result = new int[this.MaxElement];
         int[] d = this.InDegree;
         int judge;
@@ -74,6 +97,14 @@ public class GraphOperation {
     }
 
     public int[] bfs(int start, int end) {
+        /**
+         * @description breadth first search
+         * @param start index of start node
+         * @param end index of end node
+         * @return int[] path from start to end
+         * @author zczeng
+         * @date 2020/3/10 16:37
+         */
         Queue q = new Queue();
         int[][] record = new int[this.MaxElement][2];/*record parent(1 col) & dis(2 col) of each node*/
         int i;
@@ -114,13 +145,4 @@ public class GraphOperation {
             return result;
         }
     }
-
-    public GraphNode GetIn(int ind) {
-        return this.in[ind];
-    }
-
-    public GraphNode GetOut(int ind) {
-        return this.out[ind];
-    }
-
 }

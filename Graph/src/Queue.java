@@ -10,6 +10,13 @@ public class Queue {
     }
 
     public void enqueue(QueueNode n) {
+        /**
+         * @description enqueue node n into the queue
+         * @param n queue node
+         * @return void
+         * @author zczeng
+         * @date 2020/3/10 16:34
+         */
         if (this.size == 0) {
             this.front.next = n;
         } else {
@@ -20,6 +27,13 @@ public class Queue {
     }
 
     public QueueNode dequeue() {
+        /**
+         * @description dequeue element from the queue
+         * @param
+         * @return QueueNode
+         * @author zczeng
+         * @date 2020/3/10 16:34
+         */
         if (this.size == 0) {
             System.out.println("Empty Queue, unable to dequeue");
             return null;

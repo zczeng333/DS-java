@@ -3,6 +3,14 @@ public class DijOperation {
     private int MaxElement;
 
     public DijOperation(int MaxElement, int W[][]) {
+        /**
+         * @description
+         * @param MaxElement
+         * @param W
+         * @return
+         * @author zczeng
+         * @date 2020/3/10 16:30
+         */
         this.out = new GraphNode[MaxElement];
         this.MaxElement = MaxElement;
         for (int i = 0; i < MaxElement; i++) {/*Set up fake node for each graph list*/
