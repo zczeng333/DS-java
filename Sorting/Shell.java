@@ -1,5 +1,12 @@
 public class Shell {
     public static int[] shell_sort(int[] args) {
+        /**
+         * @description Shell sorting for unordered array
+         * @param args unordered array
+         * @return int[] sorted array
+         * @author zczeng
+         * @date 2020/3/10 16:46
+         */
         int len = args.length;
         int gap = len / 2;
         int i, j, k, max_k, temp;
@@ -11,7 +18,7 @@ public class Shell {
                     max_k = gap * (int) (len / gap) + i - gap;
                 }
                 for (j = i; j < len - gap; j = j + gap) {/*for each element in one group*/
-                    k=max_k;
+                    k = max_k;
                     while (k > j) {/*apply insert sort for each element*/
                         if (args[k - gap] > args[k]) {
                             temp = args[k];

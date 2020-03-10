@@ -69,6 +69,9 @@ public class Sorting {
     }
 
     public static int[] random_array(int l, int range) {
+        /**
+         * generate random array for testing
+         */
         int[] array = new int[l];
         for (int i = 0; i < l; i++) {
             array[i] = (int) (Math.random() * range);
