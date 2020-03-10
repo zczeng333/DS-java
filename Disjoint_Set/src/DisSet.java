@@ -2,6 +2,9 @@ import java.util.Arrays;
 
 public class DisSet {
     public static void main(String[] args) {
+        /**
+         * test for disjoint set operations
+         */
         int MaxElement = 30;
         int NumR = 30;
         int temp;

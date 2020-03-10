@@ -3,6 +3,13 @@ public class DisSetOperation {
     private DisSetNode root;
 
     public DisSetOperation(int MaxElement) {
+        /**
+         * @description Initialization for Disjoint Set
+         * @param MaxElement Max number of element
+         * @return
+         * @author zczeng
+         * @date 2020/3/10 16:38
+         */
         this.s = new DisSetNode[MaxElement + 1];
         this.root = new DisSetNode(null, 0);
         this.root.size = -1;
@@ -13,6 +20,13 @@ public class DisSetOperation {
     }
 
     public void BuildSet(int[][] r) {
+        /**
+         * @description build up disjoint set based on relations
+         * @param r relation array, each row of which is a relation
+         * @return void
+         * @author zczeng
+         * @date 2020/3/10 16:39
+         */
         if (r.length == 0) {
             System.out.println("Empty relation!");
         } else {
@@ -29,6 +43,13 @@ public class DisSetOperation {
     }
 
     private DisSetNode find(DisSetNode x) {
+        /**
+         * @description find the ancestor of node x in
+         * @param x
+         * @return DisSetNode
+         * @author zczeng
+         * @date 2020/3/10 16:40
+         */
         while (x.parent != root) {
             x = x.parent;
         }
@@ -36,6 +57,14 @@ public class DisSetOperation {
     }
 
     private void union(DisSetNode x, DisSetNode y) {
+        /**
+         * @description Union node x with node y in a disjoint set
+         * @param x
+         * @param y
+         * @return void
+         * @author zczeng
+         * @date 2020/3/10 16:41
+         */
         DisSetNode n1, n2;
         n1 = find(x);
         n2 = find(y);
@@ -55,6 +84,13 @@ public class DisSetOperation {
     }
 
     public void PrintSet() {
+        /**
+         * @description print disjoint set
+         * @param
+         * @return void
+         * @author zczeng
+         * @date 2020/3/10 16:41
+         */
         DisSetNode[] record = this.s;
         DisSetNode temp;
         for (int i = 1; i < record.length; i++) {
