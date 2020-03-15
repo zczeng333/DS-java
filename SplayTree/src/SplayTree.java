@@ -19,6 +19,7 @@ public class SplayTree {
         //    }
         //}
         /*test for ZigzagRL, ZigzigRR and SingleR*/
+        System.out.printf("\ntest for ZigzagRL, ZigzigRR and SingleR\n");
         array = new int[]{1, 2, 3, 4, 6, 5};
         System.out.print("Input array:");
         System.out.println(Arrays.toString(array));
@@ -26,11 +27,16 @@ public class SplayTree {
         A.Find(5);
         A.show();
         /*test for ZigzagLR, ZigzigLL and SingleL*/
+        System.out.printf("\ntest for ZigzagLR, ZigzigLL and SingleL\n");
         array = new int[]{6, 5, 4, 3, 1, 2};
         System.out.print("Input array:");
         System.out.println(Arrays.toString(array));
         SplayOperation B = new SplayOperation(array);
         B.Find(2);
+        B.show();
+        /*test for deletion*/
+        System.out.printf("\nTest for deletion\n");
+        B.delete(4);
         B.show();
     }
 }

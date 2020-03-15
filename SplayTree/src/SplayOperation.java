@@ -66,6 +66,30 @@ public class SplayOperation {
         }
     }
 
+    public void delete(int value) {
+        SplayNode node = Find(value);
+        if (node == null) {
+            System.out.printf("Node with key %d does not exist!\n", value);
+        } else {
+            System.out.printf("Delete node with key %d\n", value);
+            SplayNode L = node.left;
+            SplayNode R = node.right;
+            if (L == null) {
+                this.root = R;
+            } else {
+                this.root = L;
+                L.parent = null;
+                SplayNode temp = L;
+                while (temp.right != null) {/*find the biggest value*/
+                    temp = temp.right;
+                }
+                rotate(temp);
+                this.root.right = R;
+                R.parent = this.root;
+            }
+        }
+    }
+
     public SplayNode Find(int value) {
         /**
          * @description Find node with key=value and rotate the node to the root
